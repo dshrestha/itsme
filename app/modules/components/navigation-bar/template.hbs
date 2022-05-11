@@ -1,0 +1,8 @@
+<div class="row nav-bar p-y-4">
+    <ul class="nav clearfix">
+      {{#each this.navItems as |navItem|}}
+        <li><LinkTo @route="{{navItem.route}}">{{navItem.label}}</LinkTo></li>
+      {{/each}}
+      <li class="pull-right"></li>
+    </ul>
+</div>

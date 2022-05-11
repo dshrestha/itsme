@@ -1,0 +1,11 @@
+.sticky-container {
+  position: relative;
+  width: inherit;
+}
+
+.sticky-to-top {
+  position: fixed;
+  width: inherit;
+  top: 0px;
+  z-index: 20;
+}

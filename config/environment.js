@@ -6,6 +6,7 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'history',
+    podModulePrefix: 'itsme/modules',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

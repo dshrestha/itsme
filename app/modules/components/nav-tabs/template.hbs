@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+  {{#each @tabs as |tab|}}
+    <li class="nav-item">
+      <a class="nav-link {{if (is-equal tab.label @selectedTab.label) "active"}}" aria-current="page" {{on "click" (fn this.onTabClick tab)}}>{{tab.label}} {{#if tab.badge}}<span class="badge bg-secondary">{{tab.badge}}</span>{{/if}}</a>
+    </li>
+  {{/each}}
+</ul>
+<div class="tab-content">
+    <div>{{yield}}</div>
+</div>

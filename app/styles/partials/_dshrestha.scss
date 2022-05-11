@@ -1,0 +1,104 @@
+@mixin square-image-size($height) {
+  width: $height;
+  height: $height;
+}
+
+.inner-container {
+  width: inherit;
+}
+
+img {
+  &.image-64 {
+    @include square-image-size(64px);
+  }
+
+  &.image-48 {
+    @include square-image-size(48px);
+  }
+
+  &.image-32 {
+    @include square-image-size(32px);
+  }
+
+  &.round {
+    border-radius: 50px;
+  }
+
+  /*Al credit to http://tutorials.jenkov.com/responsive-mobile-friendly-web-design/responsive-images.html*/
+  &.responsive {
+    max-width: 100%; /* or max-width : 100% */
+    height: auto;
+  }
+}
+
+.round-bdr-1 {
+  border-radius: 50px;
+  border: 2px solid #74A6BD;
+
+  &:hover {
+    border-color: #E9B64D;
+  }
+}
+
+.zoom-on-hover-1 {
+  &:hover {
+    border-radius: 50px;
+    border: 2px solid #E9B64D;
+  }
+}
+
+.simple-border-1 {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  padding: 5px;
+  background-color: #EFEECB;
+}
+
+p {
+  text-indent: 50px;
+}
+
+.grey-dotted-border-bottom {
+  border-bottom: 1px dashed #B2B2B2;
+}
+
+.experience-projects-container {
+  h3 {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.tab-pane {
+  margin: 10px;
+  min-height: 80px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.nav-tabs {
+  margin: 0;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+
+.experience-container {
+
+  .tab-content {
+    min-height: 350px;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px;
+  }
+
+}
+

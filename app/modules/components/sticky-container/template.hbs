@@ -1,0 +1,6 @@
+<div class="sticky-container" {{did-insert this.onRender}}>
+  <div class="{{if this.stickToTop "d-block" "d-none"}} sticky-placeholder"></div>
+  <div class="{{if this.stickToTop "sticky-to-top" ""}}">
+    {{yield}}
+  </div>
+</div>

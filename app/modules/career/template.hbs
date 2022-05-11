@@ -1,0 +1,18 @@
+<div class="clearfix m-y-6">
+    <h3 class="grey-dotted-border-bottom">TIMELINE</h3>
+    <div class="well">
+      <Timeline @lifeEvents={{this.model.lifeEvents}} @focusEvent={{this.timeLineFocusId}} />
+    </div>
+</div>
+
+<div class="clearfix m-y-6">
+    <h3 class="grey-dotted-border-bottom">EXPERIENCE / ROLES</h3>
+    <Experience @experiences={{this.model.experiences}} @onCompanySelect={{this.onCompanySelect}} />
+</div>
+
+<div class="clearfix m-y-6">
+    <h3 class="grey-dotted-border-bottom">TECHNICAL</h3>
+    <div class="well">
+      <D3SunBurst @data={{this.model.technologiesUsed}} />
+    </div>
+</div>

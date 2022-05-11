@@ -1,0 +1,32 @@
+<div class="experience-container">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex align-items-start">
+          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            {{#each @experiences as |company|}}
+                <button class="nav-link text-start {{if (is-equal this.selectedCompany company) "active"}}" type="button" role="tab" aria-selected="true" {{on "click" (fn this.selectCompany company)}}>{{company.name}}</button>
+            {{/each}}
+          </div>
+      </div>
+    </div>
+    <div class="col-8">
+       <NavTabs @tabs={{this.subComponentTabs}} @selectedTab={{this.selectedTab}} @onChange={{this.subComponentTabClick}}>
+        {{#if (is-equal this.selectedTab.label 'Role')}}
+           <Experience::roles @company={{this.selectedCompany}} />
+        {{else}}
+           <BsAccordion as |acc|>
+              {{#each this.selectedCompany.projects as |project index|}}
+                <acc.item @value="{{index}}" @title="{{project.name}}">
+                  <ul>
+                  {{#each project.tasks as |task|}}
+                      <li>{{task}}</li>
+                  {{/each}}
+                  </ul>
+                </acc.item>
+              {{/each}}
+           </BsAccordion>
+        {{/if}}
+       </NavTabs>
+    </div>
+  </div>
+</div>

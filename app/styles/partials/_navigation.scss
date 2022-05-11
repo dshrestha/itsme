@@ -1,0 +1,34 @@
+.nav-bar {
+  padding: 0px 0px ($spacer-x) 0px;
+  border-bottom: 2px solid #6D7073;
+  -webkit-box-shadow: 0 6px 8px -8px black;
+  -moz-box-shadow: 0 6px 8px -8px black;
+  box-shadow: 0 6px 8px -8px black;
+  background-color: rgba(255, 255, 255, 1);
+  width:inherit;
+
+  .nav {
+
+    > li {
+      float: left;
+      list-style-type: none;
+
+      > a {
+        color: #3b8dbd;
+        text-decoration: none;
+        height: 25px;
+        cursor: pointer;
+        font: 20px "colaborate thinregular";
+        font-weight: bold;
+        padding-right: 20px;
+        padding-left: 0px;
+        display: table-cell;
+        vertical-align: middle;
+
+        &:hover, &:focus, &.active {
+          color: #AB988B;
+        }
+      }
+    }
+  }
+}

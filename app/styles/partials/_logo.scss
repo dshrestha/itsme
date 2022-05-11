@@ -1,0 +1,34 @@
+@mixin logo-child-common-style($height) {
+  border-radius: 0px 0px 6px 6px;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+}
+
+.name-logo {
+  letter-spacing: 0.1em;
+  font: 1.8em "Fredericka the Great";
+  background-color: #EB8540;
+  border-radius: 0px 0px 6px 6px;
+  font-size: 2em;
+  color: #FAFAFA;
+
+  div:nth-child(1) {
+    background-color: #74A6BD;
+    @include logo-child-common-style(6em);
+  }
+
+  div:nth-child(2) {
+    background-color: #E9B64D;
+    @include logo-child-common-style(2.5em);
+  }
+
+  div:nth-child(3) {
+    background-color: #90CA77;
+    @include logo-child-common-style(4em);
+  }
+}
+
+$spacer-x : 5px;
+
+

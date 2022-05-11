@@ -4,7 +4,10 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-bootstrap': {
+      bootstrapVersion: 5,
+      importBootstrapCSS: false,
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,5 +23,25 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  //IMPORT TIMELINE
+  app.import('vendor/timeline3/js/timeline-min.js');
+  app.import('vendor/timeline3/css/timeline.css');
+  app.import('vendor/timeline3/css/icons/tl-icons.eot', {
+    destDir: 'assets/icons',
+  });
+  app.import('vendor/timeline3/css/icons/tl-icons.svg', {
+    destDir: 'assets/icons',
+  });
+  app.import('vendor/timeline3/css/icons/tl-icons.ttf', {
+    destDir: 'assets/icons',
+  });
+  app.import('vendor/timeline3/css/icons/tl-icons.woff', {
+    destDir: 'assets/icons',
+  });
+  app.import('vendor/timeline3/css/icons/tl-icons.woff2', {
+    destDir: 'assets/icons',
+  });
+  //IMPORT D3
+  app.import('node_modules/d3/d3.js');
   return app.toTree();
 };
